@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    height: 15%;
+    height: 20vh;
 }
 
 .header-upper-block-grid {
@@ -19,6 +19,22 @@ header {
     display: grid;
     grid-template-columns: 20% 80%;
     justify-items: center;
+    align-items: center;
+    column-gap: 0;
+}
+
+.logo-link {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-img {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .header-lower-block-grid {
@@ -51,11 +67,6 @@ nav {
     text-align: center;
     color: #287D62;
     border-radius: 5px;
-}
-
-.logo-img {
-    height: 100%;
-    width: 100%;
 }
 
 body {
