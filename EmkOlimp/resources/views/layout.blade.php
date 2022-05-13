@@ -10,18 +10,22 @@
 <body>
 
     <header>
-        <div class="img_class">
-            <img src="{{URL::asset('storage/assets/img/LogoEMK.png')}}" alt="LogoEMK">
-            <H1>Международная дистанционная олимпиада «Проектирование и разработка баз данных»</H1>
+        <div class="header-upper-block-grid">
+            <div class="header-upper-block">
+                <img class="logo-img" src="{{URL::asset('storage/assets/img/LogoEMK.png')}}" alt="LogoEMK">
+                <H1>Международная дистанционная олимпиада «Проектирование и разработка баз данных»</H1>
+            </div>
         </div>
-        <div>
-            <nav>
-                <a href="">button</a>
-                <a href="">button</a>
-                <a href="">button</a>
-                <a href="">button</a>
-                <a href="">button</a>
-            </nav>
+        <div class="header-lower-block-grid">
+            <div class="header-lower-block">
+                <nav>
+                    <a class="nav-button" href="">button</a>
+                    <a class="nav-button" href="">button</a>
+                    <a class="nav-button" href="">button</a>
+                    <a class="nav-button" href="">button</a>
+                    <a class="nav-button" href="">button</a>
+                </nav>
+            </div>
         </div>
     </header>
 
