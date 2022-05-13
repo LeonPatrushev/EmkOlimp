@@ -1,4 +1,6 @@
 header {
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 20vh;
 }
@@ -18,6 +20,7 @@ header {
     height: 100%;
     display: grid;
     grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
     justify-items: center;
     align-items: center;
     column-gap: 0;
@@ -28,13 +31,16 @@ header {
     padding: 0;
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-img {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
 }
 
 .header-lower-block-grid {
@@ -60,16 +66,13 @@ nav {
 }
 
 .nav-button {
-    height: 80%;
+    height: 60%;
     width: 15%;
     background-color: #ffff;
     text-decoration: none;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #287D62;
     border-radius: 5px;
-}
-
-body {
-    margin: 0;
-    padding: 0;
 }

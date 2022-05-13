@@ -1,1 +1,4 @@
-@import url(components/header.css);
+@import "components/body.css";
+@import "components/header.css";
+@import "components/footer.css";
+@import "components/fonts.css";

@@ -36,19 +36,24 @@
     </article>
 
     <footer>
-
-        <div class="green-panel"></div>
-
-        <div >
-            <a href="">
-                <img src="" alt="">
-            </a>
-            <div>
+        <div class="footer-upper-block-grid"></div>
+        <div class="footer-lower-block-grid">
+            <div class="footer-lower-block">
+                <a class="logo-link" href="">
+                    <img class="logo-img" src="{{URL::asset('storage/assets/img/LogoEMK.png')}}" alt="LogoEMK">
+                </a>
                 <p>Государственное автономное профессиональное образовательное учреждение Свердловской области «Екатеринбургский монтажный колледж»</p>
-                <p>620063, г.Екатеринбург ул. Декабристов, стр. 83 +7 (343) 257-47-46 E-mail: emk-ekat@yandex.ru</p>
+                <ul class="footer-contact-info">
+                    <li>620063, г.Екатеринбург</li>
+                    <li>ул. Декабристов, стр. 83</li>
+                    <li>+7 (343) 257-47-46</li>
+                    <li>E-mail: emk-ekat@yandex.ru</li>
+                </ul>
+                {{-- <div>
+                    <p>620063, г.Екатеринбург ул. Декабристов, стр. 83 +7 (343) 257-47-46 E-mail: emk-ekat@yandex.ru</p>
+                </div> --}}
             </div>
         </div>
-
     </footer>
 
     @yield('script')
