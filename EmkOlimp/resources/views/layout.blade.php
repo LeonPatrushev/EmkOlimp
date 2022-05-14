@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmkOlimp</title>
-    <link rel="stylesheet" href="{{URL::asset('storage/assets/css/main.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('storage/assets/css/style.main.css')}}">
 </head>
 <body>
 
@@ -31,9 +31,9 @@
         </div>
     </header>
 
-    <article>
+    <main>
         @yield('content')
-    </article>
+    </main>
 
     <footer>
         <div class="footer-upper-block-grid"></div>
@@ -49,9 +49,6 @@
                     <li>+7 (343) 257-47-46</li>
                     <li>E-mail: emk-ekat@yandex.ru</li>
                 </ul>
-                {{-- <div>
-                    <p>620063, г.Екатеринбург ул. Декабристов, стр. 83 +7 (343) 257-47-46 E-mail: emk-ekat@yandex.ru</p>
-                </div> --}}
             </div>
         </div>
     </footer>

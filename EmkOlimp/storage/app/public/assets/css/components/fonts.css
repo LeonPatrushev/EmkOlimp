@@ -1,9 +1,43 @@
-h1 {
-    text-align: center;
-    color: #ffff;
+@font-face {
+    font-family: "Tahoma-Bold";
+    src: url(../../fonts/TahomaBold.ttf);
 }
 
-p {
-    text-align: center;
-    color: #ffff;
+
+/* Заготовка для адаптивной верстки */
+
+@media screen and (max-width: 1920px) {
+    h1 {
+        font-family: 'Tahoma-Bold';
+    }
+    a {
+        font-family: 'Tahoma-Bold';
+    }
+    p {
+        font-family: 'Tahoma';
+    }
+}
+
+@media screen and (max-width: 1336px) {
+    h1 {
+        font-family: 'Tahoma-Bold';
+    }
+    a {
+        font-family: 'Tahoma-Bold';
+    }
+    p {
+        font-family: 'Tahoma';
+    }
+}
+
+@media screen and (max-width: 360px) {
+    h1 {
+        font-family: 'Tahoma-Bold';
+    }
+    a {
+        font-family: 'Tahoma-Bold';
+    }
+    p {
+        font-family: 'Tahoma';
+    }
 }
