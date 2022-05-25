@@ -15,7 +15,7 @@
                 <a class="logo-link" href="">
                     <img class="logo-img" src="{{URL::asset('storage/assets/img/LogoEMK.png')}}" alt="LogoEMK">
                 </a>
-                <H1>Международная дистанционная олимпиада «Проектирование и разработка баз данных»</H1>
+                <h2>Государственное автономное профессиональное образовательное учреждение Свердловской области «Екатеринбургский монтажный колледж»</H2>
             </div>
         </div>
         <div class="header-lower-block-grid">
