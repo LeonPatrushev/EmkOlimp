@@ -5,7 +5,7 @@
     <section class="section-background-overlay">
         <div class="section-background-overlay-darkening">
             <div class="information-about-the-olympiad-head">
-                <img class="logo-img" src="{{URL::asset('storage/assets/img/LogoEMK.png')}}" alt="LogoEMK">
+                <img class="logo-img" src="{{URL::asset('assets/img/EMK_logo_white.svg')}}" alt="LogoEMK">
                 <h1>
                     Международная дистанционная олимпиада «Проектирование и разработка баз данных»
                 </h1>
@@ -99,15 +99,15 @@
             </div>
             <div class="important-know-grid-item-one">
                 <h3>Информационное письмо</h3>
-                <a class="view-info-button" href="{{URL::asset('storage/assets/doc/InformationLetter.pdf')}}">Посмотреть</a>
+                <a class="view-info-button" href="{{URL::asset('assets/doc/InformationLetter.pdf')}}">Посмотреть</a>
             </div>
             <div class="important-know-grid-item-two">
                 <h3>Положение</h3>
-                <a class="view-info-button" href="{{URL::asset('storage/assets/doc/Position.pdf')}}">Посмотреть</a>
+                <a class="view-info-button" href="{{URL::asset('assets/doc/Position.pdf')}}">Посмотреть</a>
             </div>
             <div class="important-know-grid-item-three">
                 <h3>Инструкция по работе с системой дистанционного обучения</h3>
-                <a class="view-info-button" href="{{URL::asset('storage/assets/doc/Manual.pdf')}}">Посмотреть</a>
+                <a class="view-info-button" href="{{URL::asset('assets/doc/Manual.pdf')}}">Посмотреть</a>
             </div>
         </div>
     </section>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmkOlimp</title>
-    <link rel="stylesheet" href="{{URL::asset('storage/assets/css/style.main.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/style.main.css')}}">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
         <div class="header-upper-block-grid">
             <div class="header-upper-block">
                 <a class="logo-link" href="">
-                    <img class="logo-img" src="{{URL::asset('storage/assets/img/LogoEMK.png')}}" alt="LogoEMK">
+                    <img class="logo-img" src="{{URL::asset('assets/img/EMK_logo_white.svg')}}" alt="LogoEMK">
                 </a>
                 <h2>Государственное автономное профессиональное образовательное учреждение Свердловской области «Екатеринбургский монтажный колледж»</H2>
             </div>
@@ -40,7 +40,7 @@
         <div class="footer-lower-block-grid">
             <div class="footer-lower-block">
                 <a class="logo-link" href="">
-                    <img class="logo-img" src="{{URL::asset('storage/assets/img/LogoEMK.png')}}" alt="LogoEMK">
+                    <img class="logo-img" src="{{URL::asset('assets/img/EMK_logo_white.svg')}}" alt="LogoEMK">
                 </a>
                 <p>Государственное автономное профессиональное образовательное учреждение Свердловской области «Екатеринбургский монтажный колледж»</p>
                 <ul class="footer-contact-info">
