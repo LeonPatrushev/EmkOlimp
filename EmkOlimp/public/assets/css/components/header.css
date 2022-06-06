@@ -2,7 +2,7 @@ header {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 20vh;
+    height: 20vmin;
 }
 
 .header-upper-block-grid {
@@ -13,6 +13,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header-upper-block-grid h2 {
+    color: #ffff;
+    text-align: left;
 }
 
 .header-upper-block {

@@ -3,24 +3,20 @@
     src: url(../../fonts/TahomaBold.ttf);
 }
 
-
-/* Заготовка для адаптивной верстки */
-
-
-/* @media screen and (max-width: 1920px) { */
-
 h1 {
     margin: 0;
     padding: 0;
     font-family: "Tahoma-Bold";
-    text-align: center;
     color: #ffff;
+    font-size: 4vmin;
+    text-align: center;
 }
 
 h2 {
     margin: 0;
     padding: 0;
     font-family: "Tahoma-Bold";
+    font-size: 3.5vmin;
     text-align: center;
 }
 
@@ -28,6 +24,7 @@ h3 {
     margin: 0;
     padding: 0;
     font-family: "Tahoma-Bold";
+    font-size: 3vmin;
     text-align: center;
 }
 
@@ -35,6 +32,7 @@ h4 {
     margin: 0;
     padding: 0;
     font-family: "Tahoma-Bold";
+    font-size: 3vmin;
     text-align: center;
 }
 
@@ -42,9 +40,10 @@ a {
     margin: 0;
     padding: 0;
     font-family: "Tahoma-Bold";
-    text-align: center;
     text-decoration: none;
     color: #ffff;
+    text-align: center;
+    font-size: 2.5vmin;
 }
 
 p {
@@ -52,32 +51,5 @@ p {
     padding: 0;
     font-family: "Tahoma";
     text-align: center;
+    font-size: 2.5vmin;
 }
-
-
-/* } */
-
-
-/* @media screen and (max-width: 1336px) {
-    h1 {
-        font-family: 'Tahoma-Bold';
-    }
-    a {
-        font-family: 'Tahoma-Bold';
-    }
-    p {
-        font-family: 'Tahoma';
-    }
-}
-
-@media screen and (max-width: 360px) {
-    h1 {
-        font-family: 'Tahoma-Bold';
-    }
-    a {
-        font-family: 'Tahoma-Bold';
-    }
-    p {
-        font-family: 'Tahoma';
-    }
-} */

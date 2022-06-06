@@ -42,13 +42,22 @@
                 <a class="logo-link" href="">
                     <img class="logo-img" src="{{URL::asset('assets/img/EMK_logo_white.svg')}}" alt="LogoEMK">
                 </a>
-                <p>Государственное автономное профессиональное образовательное учреждение Свердловской области «Екатеринбургский монтажный колледж»</p>
-                <ul class="footer-contact-info">
-                    <li>620063, г.Екатеринбург</li>
-                    <li>ул. Декабристов, стр. 83</li>
-                    <li>+7 (343) 257-47-46</li>
-                    <li>E-mail: emk-ekat@yandex.ru</li>
-                </ul>
+                <p class="footer-info-college">Государственное автономное профессиональное образовательное учреждение Свердловской области «Екатеринбургский монтажный колледж»</p>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-info-item">
+                        <p>620063, г.Екатеринбург ул. Декабристов, стр. 83</p>
+                        <img src="{{URL::asset('assets/img/home_icon_white.svg')}}" alt="home_icon">
+                    </div>
+                    <div class="footer-contact-info-item">
+                        <a href="tel:+73432574746">+7 (343) 257-47-46</a>
+                        <img src="{{URL::asset('assets/img/call_icon_white.svg')}}" alt="call_icon">
+                    </div>
+                    <div class="footer-contact-info-item">
+                        <a href="mailto:emk-ekat@yandex.ru">emk-ekat@yandex.ru</a>
+                        <img src="{{URL::asset('assets/img/message_icon_white.svg')}}" alt="message_icon"> 
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </footer>
