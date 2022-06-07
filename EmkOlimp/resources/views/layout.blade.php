@@ -12,7 +12,7 @@
     <header>
         <div class="header-upper-block-grid">
             <div class="header-upper-block">
-                <a class="logo-link" href="">
+                <a class="logo-link" href="{{route('index')}}">
                     <img class="logo-img" src="{{URL::asset('assets/img/EMK_logo_white.svg')}}" alt="LogoEMK">
                 </a>
                 <h2>Государственное автономное профессиональное образовательное учреждение Свердловской области «Екатеринбургский монтажный колледж»</H2>
@@ -21,11 +21,11 @@
         <div class="header-lower-block-grid">
             <div class="header-lower-block">
                 <nav>
-                    <a class="nav-button" href="">button</a>
-                    <a class="nav-button" href="">button</a>
-                    <a class="nav-button" href="">button</a>
-                    <a class="nav-button" href="">button</a>
-                    <a class="nav-button" href="">button</a>
+                    <a class="nav-button" href="{{route('index')}}">Главная</a>
+                    <a class="nav-button" href="index.php#about">О олимпиаде</a>
+                    <a class="nav-button" href="index.php#submitApplication">Подать заявку</a>
+                    <a class="nav-button" href="http://емколледж.рф/" target="_blank">Сайт колледжа</a>
+                    {{-- <a class="nav-button" href="">button</a> --}}
                 </nav>
             </div>
         </div>
@@ -39,7 +39,7 @@
         <div class="footer-upper-block-grid"></div>
         <div class="footer-lower-block-grid">
             <div class="footer-lower-block">
-                <a class="logo-link" href="">
+                <a class="logo-link" href="{{route('index')}}">
                     <img class="logo-img" src="{{URL::asset('assets/img/EMK_logo_white.svg')}}" alt="LogoEMK">
                 </a>
                 <p class="footer-info-college">Государственное автономное профессиональное образовательное учреждение Свердловской области «Екатеринбургский монтажный колледж»</p>

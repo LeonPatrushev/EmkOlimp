@@ -5,7 +5,6 @@
     <section class="section-background-overlay">
         <div class="section-background-overlay-darkening">
             <div class="information-about-the-olympiad-head">
-                {{-- <img class="logo-img" src="{{URL::asset('assets/img/EMK_logo_white.svg')}}" alt="LogoEMK"> --}}
                 <h1>
                     Международная дистанционная олимпиада «Проектирование и разработка баз данных»
                 </h1>
@@ -21,7 +20,7 @@
         </div>
     </section>
     
-    <section>
+    <section id="about">
         <div class="information-about-the-olympiad-directions-grid">
             <div class="directions-grid-head">
                 <h2>
@@ -141,6 +140,21 @@
             </div>
         </div>
     </section>
-    
-    
+    <section id="submitApplication">
+        <div>
+            <h2>Регистрация на олимпиаду</h2>
+            <form method="POST" action="{{route('participant.store')}}">
+                @csrf
+                <input type="text" name="participant_full_name" id="participant_full_name" placeholder="ФИО участника">
+                <input type="text" name="participants_email" id="participants_email" placeholder="E-mail участника">
+                <input type="text" name="name_institution" id="name_institution" placeholder="Полное наименование учебного заведения">
+                <input type="text" name="specialization" id="specialization" placeholder="Специальность">
+                <input type="text" name="course" id="course" placeholder="Курс">
+                <input type="text" name="teacher_full_name" id="teacher_full_name" placeholder="ФИО преподавателя">
+                <input type="text" name="teacher_phone_number" id="teacher_phone_number" placeholder="Телефон преподавателя">
+                <input type="text" name="teacher_email" id="teacher_email" placeholder="E-mail преподавателя">
+                <button type="submit">подать заявку</button>
+            </form>
+        </div>
+    </section>
 @endsection
