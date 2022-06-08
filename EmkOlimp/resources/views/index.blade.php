@@ -117,8 +117,6 @@
         </div>
     </section>
 
-    
-    
     <section>
         <div class="information-about-the-olympiad-important-know-grid">
             <div class="important-know-grid-head">
@@ -140,6 +138,7 @@
             </div>
         </div>
     </section>
+
     <section id="submitApplication">
         <div class="submit-application-grid">
             <div class="submit-application-head">
@@ -186,7 +185,5 @@
             </form>
         </div>
     </section>
-@endsection
-@section('script')
-    
+
 @endsection

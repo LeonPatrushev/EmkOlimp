@@ -3,28 +3,30 @@
 @section('content')
 
     <section>
-        <div>
-            <h2>Вход</h2>
-            <form method="POST" action="{{route('login.login')}}">
-                @csrf
-                <div>
-                    <label for="email">E-mail</label>
-                    <input name="email" id="email" type="text" placeholder="E-mail">
-                    @error('email')
-                        <div>{{ $message }}</div>
-                    @enderror
+        <div class="authorization-form tabs_pane_min">
+            <div class="authorization-form-grid">
+                <div class="authorization-form-head">
+                    <h2>Вход</h2>
                 </div>
-                <div>
-                    <label for="password">Пароль</label>
-                    <input name="password" id="password" type="text" placeholder="пароль">
-                    @error('password')
-                        <div>{{ $message }}</div>
-                    @enderror
-                </div>
-                <div>
-                    <button type="submit">Войти</button>
-                </div>
-            </form>
+                <form method="POST" action="{{route('login.login')}}" class="authorization-form-form">
+                    @csrf
+                    <div class="authorization-form-form-item">
+                        <input name="email" id="email" type="text" placeholder="E-mail" class="custom-input">
+                        @error('email')
+                            <div class="error-form">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="authorization-form-form-item">
+                        <input name="password" id="password" type="text" placeholder="пароль" class="custom-input">
+                        @error('password')
+                            <div class="error-form">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div>
+                        <button type="submit" class="custom-button">войти</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 

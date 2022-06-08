@@ -11,7 +11,7 @@
 
     <header>
         <div class="header-upper-block-grid">
-            <div class="header-upper-block">
+            <div class="header-upper-block admin-header-upper-block">
                 <a class="logo-link" href="{{route('index')}}">
                     <img class="logo-img" src="{{URL::asset('assets/img/EMK_logo_white.svg')}}" alt="LogoEMK">
                 </a>
@@ -19,89 +19,190 @@
             </div>
         </div>
         <div class="header-lower-block-grid">
-            <div class="header-lower-block">
+            <div class="header-lower-block-nav admin-header-lower-block-nav">
                 <nav class="tabs__nav">
-                    <a href="{{route('index')}}">Главная</a>
-                    <a class="tabs__link tabs__link_active" href="#content-1">Заявки на олимпиаду</a>
-                    <a class="tabs__link" href="#content-2">Изменить информацию о олимпиаде</a>
-                    <a class="tabs__link" href="#content-3">Добавить модератора</a>
-                    <a href="{{route('logout.index')}}">Выйти</a>
+                    <a class="nav-button" href="{{route('index')}}">Главная</a>
+                    <a class="tabs__link tabs__link_active nav-button" href="#content-1">Заявки на олимпиаду</a>
+                    <a class="tabs__link nav-button" href="#content-2">Изменить информацию об олимпиаде</a>
+                    <a class="tabs__link nav-button" href="#content-3">Добавить модератора</a>
+                    <a class="nav-button" href="{{route('logout.index')}}">Выйти</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main>
-        <section>
+        <section class="admin-section">
             <div class="tabs">
                 <div class="tabs__content">
                     <div class="tabs__pane tabs__pane_show tabs_pane_min" id="content-1">
-                        <h2>Заявки на олимпиаду</h2>
-                        <table>
-                            <thead>
-                                <th>Полное наименование учебного заведения</th>
-                                <th>ФИО участника</th>
-                                <th>E-mail участника</th>
-                                <th>Специальность</th>
-                                <th>Курс</th>
-                                <th>ФИО преподавателя</th>
-                                <th>Контактный телефон преподавателя</th>
-                                <th>E-mail преподавателя</th>
-                                <th>Статус</th>
-                                <th>Дата регистрации</th>
-                                <th>Управление</th>
-                            </thead>
-                            <tbody>
-                            @foreach ($waiting_participants as $participant)
-                                <tr>
-                                    <th>{{$participant['name_institution']}}</th>
-                                    <th>{{$participant['participant_full_name']}}</th>
-                                    <th>{{$participant['participants_email']}}</th>
-                                    <th>{{$participant['specialization']}}</th>
-                                    <th>{{$participant['course']}}</th>
-                                    <th>{{$participant['teacher_full_name']}}</th>
-                                    <th>{{$participant['teacher_phone_number']}}</th>
-                                    <th>{{$participant['teacher_email']}}</th>
-                                    <th>{{$participant['name']}}</th>
-                                    <th>{{$participant['updated_at']}}</th>
-                                    <th>
-                                        <form method="POST" action="{{route('participant.update')}}">
-                                            @csrf
-                                            <input type="hidden" value="{{$participant['id']}}" name="participant_id">
-                                            <button type="submit" value="approve" name="status_change">Одобрить</button>
-                                            <button type="submit" value="reject" name="status_change">Отклонить</button>
-                                        </form>
-                                    </th>
-                                </tr>
-                            @endforeach  
-                            </tbody>
-                        </table> 
+                        <div class="application-management">
+                            <div class="application-management-head">
+                                <h2>Заявки на олимпиаду</h2>
+                            </div>
+                            <div class="tabs_min">
+                                <div class="tabs_min_nav">
+                                    <a class="tabs_min_link tabs_min_link_active" href="#content-4">Ожидают</a>
+                                    <a class="tabs_min_link" href="#content-5">Одобренны</a>
+                                    <a class="tabs_min_link" href="#content-6">Отклонены</a>
+                                </div>
+                                <div class="tabs_min_pane tabs_min_pane_show" id="content-4">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Полное наименование учебного заведения</th>
+                                                <th>ФИО участника</th>
+                                                <th>E-mail участника</th>
+                                                <th>Специальность</th>
+                                                <th>Курс</th>
+                                                <th>ФИО преподавателя</th>
+                                                <th>Контактный телефон преподавателя</th>
+                                                <th>E-mail преподавателя</th>
+                                                <th>Статус</th>
+                                                <th>Дата регистрации</th>
+                                                <th>Управление</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach ($waiting_participants as $participant)
+                                            <tr>
+                                                <td>{{$participant['name_institution']}}</td>
+                                                <td>{{$participant['participant_full_name']}}</td>
+                                                <td>{{$participant['participants_email']}}</td>
+                                                <td>{{$participant['specialization']}}</td>
+                                                <td>{{$participant['course']}}</td>
+                                                <td>{{$participant['teacher_full_name']}}</td>
+                                                <td>{{$participant['teacher_phone_number']}}</td>
+                                                <td>{{$participant['teacher_email']}}</td>
+                                                <td>{{$participant['name']}}</td>
+                                                <td>{{$participant['updated_at']}}</td>
+                                                <td>
+                                                    <form method="POST" action="{{route('participant.update')}}" class="control-form">
+                                                        @csrf
+                                                        <input type="hidden" value="{{$participant['id']}}" name="participant_id">
+                                                        <button type="submit" value="approve" name="status_change" class="control-button">Одобрить</button>
+                                                        <button type="submit" value="reject" name="status_change" class="control-button">Отклонить</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach  
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tabs_min_pane" id="content-5">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Полное наименование учебного заведения</th>
+                                                <th>ФИО участника</th>
+                                                <th>E-mail участника</th>
+                                                <th>Специальность</th>
+                                                <th>Курс</th>
+                                                <th>ФИО преподавателя</th>
+                                                <th>Контактный телефон преподавателя</th>
+                                                <th>E-mail преподавателя</th>
+                                                <th>Статус</th>
+                                                <th>Дата регистрации</th>
+                                                <th>Управление</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($approved_participants as $participant)
+                                                <tr>
+                                                    <td>{{$participant['name_institution']}}</td>
+                                                    <td>{{$participant['participant_full_name']}}</td>
+                                                    <td>{{$participant['participants_email']}}</td>
+                                                    <td>{{$participant['specialization']}}</td>
+                                                    <td>{{$participant['course']}}</td>
+                                                    <td>{{$participant['teacher_full_name']}}</td>
+                                                    <td>{{$participant['teacher_phone_number']}}</td>
+                                                    <td>{{$participant['teacher_email']}}</td>
+                                                    <td>{{$participant['name']}}</td>
+                                                    <td>{{$participant['updated_at']}}</td>
+                                                    <td>
+                                                        <form method="POST" action="{{route('participant.update')}}" class="control-form">
+                                                            @csrf
+                                                            <input type="hidden" value="{{$participant['id']}}" name="participant_id">
+                                                            <button type="submit" value="approve" name="status_change" class="control-button">Одобрить</button>
+                                                            <button type="submit" value="reject" name="status_change" class="control-button">Отклонить</button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            @endforeach  
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tabs_min_pane" id="content-6">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Полное наименование учебного заведения</th>
+                                                <th>ФИО участника</th>
+                                                <th>E-mail участника</th>
+                                                <th>Специальность</th>
+                                                <th>Курс</th>
+                                                <th>ФИО преподавателя</th>
+                                                <th>Контактный телефон преподавателя</th>
+                                                <th>E-mail преподавателя</th>
+                                                <th>Статус</th>
+                                                <th>Дата регистрации</th>
+                                                <th>Управление</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($rejected_participants as $participant)
+                                                <tr>
+                                                    <td>{{$participant['name_institution']}}</td>
+                                                    <td>{{$participant['participant_full_name']}}</td>
+                                                    <td>{{$participant['participants_email']}}</td>
+                                                    <td>{{$participant['specialization']}}</td>
+                                                    <td>{{$participant['course']}}</td>
+                                                    <td>{{$participant['teacher_full_name']}}</td>
+                                                    <td>{{$participant['teacher_phone_number']}}</td>
+                                                    <td>{{$participant['teacher_email']}}</td>
+                                                    <td>{{$participant['name']}}</td>
+                                                    <td>{{$participant['updated_at']}}</td>
+                                                    <td>
+                                                        <form method="POST" action="{{route('participant.update')}}" class="control-form">
+                                                            @csrf
+                                                            <input type="hidden" value="{{$participant['id']}}" name="participant_id">
+                                                            <button type="submit" value="approve" name="status_change" class="control-button">Одобрить</button>
+                                                            <button type="submit" value="reject" name="status_change" class="control-button">Отклонить</button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            @endforeach  
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="tabs__pane tabs_pane_min" id="content-2">
                         <h2>2z</h2>
                     </div>
                     <div class="tabs__pane tabs_pane_min" id="content-3">
-                        <div>
-                            <div>
-                                <h2>Регистрация</h2>
-                                <form method="POST" action="{{route('register.create')}}">
+                        <div class="authorization-form">
+                            <div class="authorization-form-grid">
+                                <div class="authorization-form-head">
+                                    <h2>Регистрация нового админа</h2>
+                                </div>
+                                <form method="POST" action="{{route('register.create')}}" class="authorization-form-form">
                                     @csrf
-                                    <div>
-                                        <label for="email">E-mail</label>
-                                        <input name="email" id="email" type="text" placeholder="E-mail">
+                                    <div class="authorization-form-form-item">
+                                        <input name="email" id="email" type="text" placeholder="E-mail" class="custom-input">
                                         @error('email')
-                                            <div>{{ $message }}</div>
+                                            <div class="error-form">{{ $message }}</div>
                                         @enderror
                                     </div>
-                                    <div>
-                                        <label for="password">Пароль</label>
-                                        <input name="password" id="password" type="text" placeholder="пароль">
+                                    <div class="authorization-form-form-item">
+                                        <input name="password" id="password" type="text" placeholder="пароль" class="custom-input">
                                         @error('password')
-                                            <div>{{ $message }}</div>
+                                            <div class="error-form">{{ $message }}</div>
                                         @enderror
                                     </div>
                                     <div>
-                                        <button type="submit">регистрация</button>
+                                        <button type="submit" class="custom-button">регистрация</button>
                                     </div>
                                 </form>
                             </div>
@@ -115,7 +216,7 @@
     <footer>
         <div class="footer-upper-block-grid"></div>
         <div class="footer-lower-block-grid">
-            <div class="footer-lower-block">
+            <div class="footer-lower-block admin-footer-lower-block">
                 <a class="logo-link" href="{{route('index')}}">
                     <img class="logo-img" src="{{URL::asset('assets/img/EMK_logo_white.svg')}}" alt="LogoEMK">
                 </a>
