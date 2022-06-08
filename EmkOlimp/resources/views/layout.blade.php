@@ -19,15 +19,12 @@
             </div>
         </div>
         <div class="header-lower-block-grid">
-            <div class="header-lower-block">
-                <nav>
-                    <a class="nav-button" href="{{route('index')}}">Главная</a>
-                    <a class="nav-button" href="index.php#about">О олимпиаде</a>
-                    <a class="nav-button" href="index.php#submitApplication">Подать заявку</a>
-                    <a class="nav-button" href="http://емколледж.рф/" target="_blank">Сайт колледжа</a>
-                    {{-- <a class="nav-button" href="">button</a> --}}
-                </nav>
-            </div>
+            <nav class="header-lower-block-nav">
+                <a class="nav-button" href="{{route('index')}}">Главная</a>
+                <a class="nav-button" href="#about">Об олимпиаде</a>
+                <a class="nav-button" href="#submitApplication">Подать заявку</a>
+                <a class="nav-button" href="http://емколледж.рф/" target="_blank">Сайт колледжа</a>
+            </nav>
         </div>
     </header>
 
@@ -61,7 +58,8 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{URL::asset('assets/js/scrolling.js')}}"></script>
     @yield('script')
 
 </body>

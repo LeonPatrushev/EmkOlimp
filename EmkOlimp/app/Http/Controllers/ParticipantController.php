@@ -20,6 +20,11 @@ class ParticipantController extends Controller
             'teacher_phone_number' => 'required',
             'teacher_email' => 'required|email'
         ]);
+        if(Participant::where('participants_email', $validateFields['participants_email'])->exists()){
+            return redirect(route('index'))->withErrors([
+                'participants_email' => 'Участник с такой почтой уже зарегистрировался'
+            ]);
+        }
         $participant = Participant::create($validateFields);
         if($participant){
             return redirect(route('index'));

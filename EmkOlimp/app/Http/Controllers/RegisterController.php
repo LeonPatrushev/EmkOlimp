@@ -9,13 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
-    public function index(){
-        if(Auth::check()){
-            return redirect(route('admin.index'));
-        }
-        return view('register');
-    }
-
     public function create(Request $request){
         $validateFields = $request->validate([
            'email' => 'required|email',
@@ -23,7 +16,7 @@ class RegisterController extends Controller
         ]);
 
         if(User::where('email', $validateFields['email'])->exists()){
-            return redirect(route('register.index'))->withErrors([
+            return redirect(route('admin.index'))->withErrors([
                 'email' => 'Пользователь с такой почтой уже существует'
             ]);
         }
@@ -33,7 +26,7 @@ class RegisterController extends Controller
             return redirect(route('admin.index'));
         }
 
-        return redirect(route('register.index'))->withErrors([
+        return redirect(route('admin.index'))->withErrors([
             'formError' => 'Ошибка при сохранении пользователя'
         ]);
     }

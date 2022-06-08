@@ -141,20 +141,52 @@
         </div>
     </section>
     <section id="submitApplication">
-        <div>
-            <h2>Регистрация на олимпиаду</h2>
-            <form method="POST" action="{{route('participant.store')}}">
+        <div class="submit-application-grid">
+            <div class="submit-application-head">
+                <h2>Регистрация на олимпиаду</h2>
+                <div class="submit-application-head-text">
+                    <p>
+                        Для участия в олимпиаде необходимо заполнить заявку. После подачи заявки и ее рассмотрения, на указанную электронную
+                        почту, будут высланы логин и пароль для авторизации в системе дистанционного обучения ГАПОУ
+                        СО «Екатеринбургский монтажный колледж», расположенной по  <a href="http://188.234.244.32">данному</a> адресу
+                    </p>
+                </div>
+            </div>
+            <form method="POST" action="{{route('participant.store')}}" class="submit-application-form">
                 @csrf
-                <input type="text" name="participant_full_name" id="participant_full_name" placeholder="ФИО участника">
-                <input type="text" name="participants_email" id="participants_email" placeholder="E-mail участника">
-                <input type="text" name="name_institution" id="name_institution" placeholder="Полное наименование учебного заведения">
-                <input type="text" name="specialization" id="specialization" placeholder="Специальность">
-                <input type="text" name="course" id="course" placeholder="Курс">
-                <input type="text" name="teacher_full_name" id="teacher_full_name" placeholder="ФИО преподавателя">
-                <input type="text" name="teacher_phone_number" id="teacher_phone_number" placeholder="Телефон преподавателя">
-                <input type="text" name="teacher_email" id="teacher_email" placeholder="E-mail преподавателя">
-                <button type="submit">подать заявку</button>
+                <div class="submit-application-form-grid">
+                    <div class="submit-application-form-item">
+                        <input type="text" name="participant_full_name" id="participant_full_name" class="custom-input" placeholder="ФИО участника">
+                    </div>
+                    <div class="submit-application-form-item">
+                        <input type="text" name="participants_email" id="participants_email" class="custom-input" placeholder="E-mail участника">
+                    </div>
+                    <div class="submit-application-form-item">
+                        <input type="text" name="name_institution" id="name_institution" class="custom-input" placeholder="Полное наименование учебного заведения">
+                    </div>
+                    <div class="submit-application-form-item">
+                        <input type="text" name="specialization" id="specialization" class="custom-input" placeholder="Специальность">
+                    </div>  
+                </div>
+                <div class="submit-application-form-grid">
+                    <div class="submit-application-form-item">
+                        <input type="text" name="course" id="course" class="custom-input" placeholder="Курс">
+                    </div>
+                    <div class="submit-application-form-item">
+                        <input type="text" name="teacher_full_name" id="teacher_full_name" class="custom-input" placeholder="ФИО преподавателя">
+                    </div>
+                    <div class="submit-application-form-item">
+                        <input type="text" name="teacher_phone_number" id="teacher_phone_number" class="custom-input" placeholder="Телефон преподавателя">
+                    </div>
+                    <div class="submit-application-form-item">
+                        <input type="text" name="teacher_email" id="teacher_email" class="custom-input" placeholder="E-mail преподавателя">
+                    </div>
+                </div>                
+                <button type="submit" class="custom-button">ПОДАТЬ ЗАЯВКУ</button>
             </form>
         </div>
     </section>
+@endsection
+@section('script')
+    
 @endsection

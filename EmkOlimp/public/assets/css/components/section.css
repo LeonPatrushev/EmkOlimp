@@ -8,7 +8,7 @@ section {
 /*блок "главный экран" */
 
 .section-background-overlay {
-    height: 80vmin;
+    height: 75vmin;
     width: 100%;
     margin: 0;
     display: flex;
@@ -38,7 +38,7 @@ section {
     justify-content: center;
     align-items: center;
     background-color: #25644F;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 0.35vmin 0.35vmin rgba(0, 0, 0, 0.25);
 }
 
 .information-about-the-olympiad-head h1 {
@@ -50,6 +50,7 @@ section {
     height: 90%;
     color: #ffff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -212,6 +213,29 @@ section {
     align-items: center;
     background-color: #287D62;
     border-radius: 0 0 0.35vmin 0.35vmin;
+    /* анимация */
+    position: relative;
+    overflow: hidden;
+}
+
+.view-info-button:hover {
+    font-size: 3vmin;
+}
+
+.view-info-button::after {
+    content: "";
+    display: block;
+    width: 2vmin;
+    height: 40vmin;
+    margin-left: 5vmin;
+    background: #fff;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    left: -20vmin;
+    top: -10vmin;
+    z-index: 1;
+    transform: rotate(45deg);
+    position: absolute;
+    animation: movingFlare 3s ease-in-out 0.05s infinite;
 }
 
 

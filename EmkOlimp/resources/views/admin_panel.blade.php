@@ -25,6 +25,7 @@
                     <a class="tabs__link tabs__link_active" href="#content-1">Список участников</a>
                     <a class="tabs__link" href="#content-2">Изменить информацию о олимпиаде</a>
                     <a class="tabs__link" href="#content-3">Добавить модератора</a>
+                    <a href="{{route('logout.index')}}">Выйти</a>
                 </nav>
             </div>
         </div>
@@ -33,7 +34,6 @@
     <main>
         <section>
             <div class="tabs">
-                
                 <div class="tabs__content">
                     <div class="tabs__pane tabs__pane_show tabs_pane_min" id="content-1">
                         <h2>Список участников</h2>
@@ -129,8 +129,7 @@
                     <div class="footer-contact-info-item">
                         <a href="mailto:emk-ekat@yandex.ru">emk-ekat@yandex.ru</a>
                         <img src="{{URL::asset('assets/img/message_icon_white.svg')}}" alt="message_icon"> 
-                    </div>
-                    
+                    </div>  
                 </div>
             </div>
         </div>
