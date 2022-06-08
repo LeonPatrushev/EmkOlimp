@@ -16,6 +16,7 @@ class Participant extends Model
         'course',
         'teacher_full_name',
         'teacher_phone_number',
-        'teacher_email'
+        'teacher_email',
+        'status_id'
     ];
 }

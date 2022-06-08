@@ -32,6 +32,20 @@ class ParticipantController extends Controller
         
     }
 
+    public function update(Request $request){
+        $formFields = $request->only(['participant_id','status_change']);
+        switch($formFields['status_change']){
+            case('approve'):
+                Participant::find($formFields['participant_id'])->update(['status_id' => 2]);
+                return redirect(route('admin.index'));
+            break;
+            case('reject'):
+                Participant::find($formFields['participant_id'])->update(['status_id' => 3]);
+                return redirect(route('admin.index'));
+            break;
+        }    
+    }
+    
     public function delete($id)
     {
         Participant::find($id)->delete();

@@ -6,6 +6,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Participant;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,4 +22,4 @@ Route::post('/admin/register/register',[RegisterController::class,'create'])->na
 Route::get('/admin/logout',[LogoutController::class, 'index'])->name('logout.index');
 
 Route::post('/participant/store',[ParticipantController::class, 'store'])->name('participant.store');
-Route::get('/participant/delete/{id}',[ParticipantController::class, 'delete'])->middleware('auth')->name('participant.delete');
+Route::post('/participant/update',[ParticipantController::class, 'update'])->name('participant.update');

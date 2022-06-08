@@ -9,9 +9,13 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index(){
-        $all_participants = Participant::get();
+        $waiting_participants = Participant::where('status_id','=','1')->join('statuses', 'statuses.id','=','participants.status_id')->get(['participants.*', 'statuses.name']);
+        $approved_participants = Participant::where('status_id','=','2')->join('statuses', 'statuses.id','=','participants.status_id')->get(['participants.*', 'statuses.name']);
+        $rejected_participants = Participant::where('status_id','=','3')->join('statuses', 'statuses.id','=','participants.status_id')->get(['participants.*', 'statuses.name']);
         return view('admin_panel', [
-            'all_participants' => $all_participants
+            'waiting_participants' => $waiting_participants,
+            'approved_participants' => $approved_participants,
+            'rejected_participants' => $rejected_participants
         ]);
     }
 }

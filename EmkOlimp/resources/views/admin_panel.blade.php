@@ -22,7 +22,7 @@
             <div class="header-lower-block">
                 <nav class="tabs__nav">
                     <a href="{{route('index')}}">Главная</a>
-                    <a class="tabs__link tabs__link_active" href="#content-1">Список участников</a>
+                    <a class="tabs__link tabs__link_active" href="#content-1">Заявки на олимпиаду</a>
                     <a class="tabs__link" href="#content-2">Изменить информацию о олимпиаде</a>
                     <a class="tabs__link" href="#content-3">Добавить модератора</a>
                     <a href="{{route('logout.index')}}">Выйти</a>
@@ -36,7 +36,7 @@
             <div class="tabs">
                 <div class="tabs__content">
                     <div class="tabs__pane tabs__pane_show tabs_pane_min" id="content-1">
-                        <h2>Список участников</h2>
+                        <h2>Заявки на олимпиаду</h2>
                         <table>
                             <thead>
                                 <th>Полное наименование учебного заведения</th>
@@ -52,7 +52,7 @@
                                 <th>Управление</th>
                             </thead>
                             <tbody>
-                            @foreach ($all_participants as $participant)
+                            @foreach ($waiting_participants as $participant)
                                 <tr>
                                     <th>{{$participant['name_institution']}}</th>
                                     <th>{{$participant['participant_full_name']}}</th>
@@ -62,13 +62,16 @@
                                     <th>{{$participant['teacher_full_name']}}</th>
                                     <th>{{$participant['teacher_phone_number']}}</th>
                                     <th>{{$participant['teacher_email']}}</th>
-                                    @if ($participant['approved'] == true)
-                                    <th>Зарегистрирован</th>
-                                    @else
-                                    <th>Ожидает модерации</th>
-                                    @endif
+                                    <th>{{$participant['name']}}</th>
                                     <th>{{$participant['updated_at']}}</th>
-                                    <th><a href="{{route('participant.delete',['id'=>$participant['id']])}}">Удалить</a></th>
+                                    <th>
+                                        <form method="POST" action="{{route('participant.update')}}">
+                                            @csrf
+                                            <input type="hidden" value="{{$participant['id']}}" name="participant_id">
+                                            <button type="submit" value="approve" name="status_change">Одобрить</button>
+                                            <button type="submit" value="reject" name="status_change">Отклонить</button>
+                                        </form>
+                                    </th>
                                 </tr>
                             @endforeach  
                             </tbody>

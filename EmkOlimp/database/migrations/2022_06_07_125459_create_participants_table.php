@@ -23,8 +23,13 @@ return new class extends Migration
             $table->string('teacher_full_name', 255)->nullable(false);
             $table->string('teacher_phone_number', 255)->nullable(false);
             $table->string('teacher_email', 255)->nullable(false);
-            $table->boolean('approved')->default(false);
+            $table->unsignedBigInteger('status_id')->default(1);
             $table->timestamps();
+
+            $table->foreign('status_id')
+                ->references('id')
+                ->on('statuses')
+                ->onDelete('cascade');
         });
     }
 
