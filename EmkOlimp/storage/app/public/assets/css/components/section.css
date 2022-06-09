@@ -1,14 +1,16 @@
 section {
-    margin-top: 3vh;
+    margin-top: 3vmin;
     background-color: #ffff;
     width: 60%;
 }
 
 
-/*блок заголовок с картинкой */
+/*блок "главный экран" */
 
 .section-background-overlay {
-    height: 100%;
+    height: 75vmin;
+    width: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -16,18 +18,15 @@ section {
     background-image: url('../../img/student-at-the-computer.jpg');
     background-position: center;
     background-size: 100% 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .section-background-overlay-darkening {
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr;
-    border-radius: 5px;
     justify-items: center;
     align-items: center;
 }
@@ -35,27 +34,33 @@ section {
 .information-about-the-olympiad-head {
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 9fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border-radius: 5px 5px 0 0;
-    background-color: #287D62;
+    background-color: #25644F;
+    box-shadow: inset 0 0.35vmin 0.35vmin rgba(0, 0, 0, 0.25);
+}
+
+.information-about-the-olympiad-head h1 {
+    margin: 3vmin;
 }
 
 .information-about-the-olympiad-text {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     color: #ffff;
-    font-size: 16pt;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.information-about-the-olympiad-text p {
+    font-size: 3.5vmin;
+}
 
-/* блок с направлениями */
+
+/* блок "направления олимпиады" */
 
 .information-about-the-olympiad-directions-grid {
     width: 100%;
@@ -65,8 +70,9 @@ section {
     grid-template-rows: 3fr 5fr;
     justify-items: center;
     align-items: center;
-    border-radius: 5px;
-    box-shadow: inset 0 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5vmin;
+    row-gap: 2vmin;
+    box-shadow: inset 0 0 0.4vmin 0.5vmin rgba(0, 0, 0, 0.25);
 }
 
 .directions-grid-head {
@@ -87,9 +93,12 @@ section {
     justify-content: center;
     align-items: center;
     background-color: #287D62;
-    box-shadow: 2px -2px 2px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 0.5vmin;
     color: #ffff;
+}
+
+.directions-grid-item-one p {
+    margin: 2vmin;
 }
 
 .directions-grid-item-two {
@@ -101,6 +110,10 @@ section {
     color: #287D62;
 }
 
+.directions-grid-item-two p {
+    margin: 2vmin;
+}
+
 .directions-grid-item-three {
     width: 100%;
     height: 100%;
@@ -108,9 +121,12 @@ section {
     justify-content: center;
     align-items: center;
     background-color: #287D62;
-    box-shadow: -2px -2px 2px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 0 0 5px 0;
+    border-radius: 0 0 0.5vmin 0;
     color: #ffff;
+}
+
+.directions-grid-item-three p {
+    margin: 2vmin;
 }
 
 
@@ -122,7 +138,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 3fr;
-    gap: 20px;
+    gap: 2vmin;
     justify-items: center;
     align-items: center;
 }
@@ -136,8 +152,8 @@ section {
     justify-content: center;
     align-items: center;
     background-color: #287D62;
-    border-radius: 5px;
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5vmin;
+    box-shadow: 0 0 0.35vmin 0.35vmin rgba(0, 0, 0, 0.25);
     color: #ffff;
 }
 
@@ -149,39 +165,44 @@ section {
     width: 100%;
     height: 100%;
     display: grid;
-    box-shadow: inset 0 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 0.35vmin 0.35vmin rgba(0, 0, 0, 0.25);
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 1fr;
     gap: 0;
     justify-items: center;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 0.5vmin;
+}
+
+.important-know-grid-item-one h3 {
+    color: #287D62;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .important-know-grid-item-two {
     width: 100%;
     height: 100%;
     display: grid;
-    box-shadow: inset 0 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5vmin;
+    box-shadow: 0 0 0.35vmin 0.35vmin rgba(0, 0, 0, 0.25);
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 1fr;
     gap: 0;
     justify-items: center;
     align-items: center;
-    border-radius: 5px;
 }
 
-.important-know-grid-item-three {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    box-shadow: inset 0 0 4px 4px rgba(0, 0, 0, 0.25);
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr;
-    gap: 0;
-    justify-items: center;
+.important-know-grid-item-two h3 {
+    color: #287D62;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border-radius: 5px;
 }
 
 .view-info-button {
@@ -191,8 +212,30 @@ section {
     justify-content: center;
     align-items: center;
     background-color: #287D62;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 0.35vmin 0.35vmin;
+    /* анимация */
+    position: relative;
+    overflow: hidden;
+}
+
+.view-info-button:hover {
+    font-size: 3vmin;
+}
+
+.view-info-button::after {
+    content: "";
+    display: block;
+    width: 2vmin;
+    height: 40vmin;
+    margin-left: 5vmin;
+    background: #fff;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    left: -20vmin;
+    top: -10vmin;
+    z-index: 1;
+    transform: rotate(45deg);
+    position: absolute;
+    animation: movingFlare 3s ease-in-out 0.05s infinite;
 }
 
 
@@ -204,8 +247,8 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 3fr;
-    column-gap: 40px;
-    row-gap: 20px;
+    column-gap: 3vmin;
+    row-gap: 2vmin;
     justify-items: center;
     align-items: center;
 }
@@ -215,8 +258,8 @@ section {
     height: 100%;
     grid-column-start: 1;
     grid-column-end: 4;
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    box-shadow: 0 0 0.35vmin 0.35vmin rgba(0, 0, 0, 0.25);
+    border-radius: 0.5vmin;
     background-color: #287D62;
     display: flex;
     justify-content: center;
@@ -229,17 +272,18 @@ section {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr 1fr;
-    gap: 10px;
+    grid-template-rows: 3fr 2fr 2fr;
+    gap: 1vmin;
     justify-items: center;
     align-items: center;
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    box-shadow: 0 0 0.35vmin 0.35vmin rgba(0, 0, 0, 0.25);
+    border-radius: 0.5vmin;
     background-color: #287D62;
 }
 
-
-/* блок с номерами этапа */
+.stages-grid-item h4 {
+    color: #ffff;
+}
 
 .stage-number-grid {
     display: flex;
@@ -250,11 +294,11 @@ section {
 }
 
 .horizontal-text {
-    font-size: 60pt;
+    font-size: 8vmin;
 }
 
 .vertical-text {
-    font-size: 15pt;
+    font-size: 2vmin;
     writing-mode: vertical-rl;
     transform: scale(-1);
 }
@@ -263,9 +307,101 @@ section {
     width: 100%;
     height: 100%;
     background-color: #ffff;
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 0.35vmin 0.35vmin rgba(0, 0, 0, 0.25);
     color: #287D62;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* блок "о олимпиаде" */
+
+.information-about-the-olympiad-main-info {
+    border-radius: 0.5vmin;
+    border-bottom: solid #287D62 0.5vmin;
+    box-shadow: 0 0 0.35vmin 0.35vmin rgba(0, 0, 0, 0.3);
+}
+
+.information-about-the-olympiad-main-info-grid {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.main-info-head {
+    border-radius: 0.5vmin 0.5vmin 0 0;
+    width: 100%;
+    height: 100%;
+    background-color: #287D62;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.main-info-head p {
+    color: #ffff;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-info-main {
+    margin: 2vmin;
+    display: grid;
+    grid-template-columns: 7fr 10fr;
+    grid-template-rows: 1fr;
+    column-gap: 2vmin;
+    justify-items: center;
+    align-items: center;
+}
+
+.main-info-main-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5vmin;
+}
+
+.main-info-main-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5vmin;
+}
+
+.main-info-main-points {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 1vmin;
+}
+
+.main-info-main-points p {
+    text-align: left;
+}
+
+.main-info-main-points-item {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 14fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    column-gap: 1vmin;
+    border-bottom: solid #287D62 0.3vmin;
+}
+
+.main-info-main-points-item img {
+    width: 100%;
+    height: 100%;
 }

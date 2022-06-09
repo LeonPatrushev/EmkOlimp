@@ -2,17 +2,25 @@ header {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 20vh;
+    height: 25vmin;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70% 30%;
 }
 
 .header-upper-block-grid {
     width: 100%;
-    height: 70%;
+    height: 100%;
     background-color: #25644F;
-    box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 -0.35vmin 0.35vmin rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header-upper-block-grid h2 {
+    color: #ffff;
+    text-align: left;
 }
 
 .header-upper-block {
@@ -45,34 +53,33 @@ header {
 
 .header-lower-block-grid {
     width: 100%;
-    height: 30%;
+    height: 100%;
     background: #287D62;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.header-lower-block {
+.header-lower-block-nav {
     width: 60%;
     height: 100%;
-}
-
-nav {
-    height: 100%;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-button {
-    height: 60%;
-    width: 15%;
+    height: 70%;
+    width: 20%;
     background-color: #ffff;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #287D62;
-    border-radius: 5px;
+    border-radius: 0.5vmin;
+}
+
+.nav-button:hover {
+    box-shadow: 0 0 0.35vmin 0.5vmin rgba(0, 0, 0, 0.25);
 }

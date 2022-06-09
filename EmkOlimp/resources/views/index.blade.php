@@ -53,23 +53,23 @@
             </div>
             <div class="main-info-main">
                 <div class="main-info-main-img">
-                    <img src="{{URL::asset('assets/img/student-at-the-computer.jpg')}}" alt="student">
+                    <img src="{{URL::asset('storage/assets/img/student-at-the-computer.jpg')}}" alt="student">
                 </div>
                 <div class="main-info-main-points">
                     <div class="main-info-main-points-item">
-                        <img src="{{URL::asset('assets/img/arrow_right_square_icon_green.svg')}}" alt="arrow_right_square_icon">
+                        <img src="{{URL::asset('storage/assets/img/arrow_right_square_icon_green.svg')}}" alt="arrow_right_square_icon">
                         <p>Форма проведения олимпиады - дистанционная.</p>
                     </div>
                     <div class="main-info-main-points-item">
-                        <img src="{{URL::asset('assets/img/arrow_right_square_icon_green.svg')}}" alt="arrow_right_square_icon">
+                        <img src="{{URL::asset('storage/assets/img/arrow_right_square_icon_green.svg')}}" alt="arrow_right_square_icon">
                         <p>Участники - студенты очной формы обучения.</p>
                     </div>
                     <div class="main-info-main-points-item">
-                        <img src="{{URL::asset('assets/img/arrow_right_square_icon_green.svg')}}" alt="arrow_right_square_icon">
+                        <img src="{{URL::asset('storage/assets/img/arrow_right_square_icon_green.svg')}}" alt="arrow_right_square_icon">
                         <p>Участие - бесплатное.</p>
                     </div>
                     <div class="main-info-main-points-item">
-                        <img src="{{URL::asset('assets/img/arrow_right_square_icon_green.svg')}}" alt="arrow_right_square_icon">
+                        <img src="{{URL::asset('storage/assets/img/arrow_right_square_icon_green.svg')}}" alt="arrow_right_square_icon">
                         <p>Язык олимпиады – русский, сербский.</p>
                     </div>
                 </div>
@@ -83,37 +83,19 @@
             <div class="stages-grid-head">
                 <h2>Этапы олимпиады</h2>
             </div>
+            @foreach ($all_stage_date as $stage_date)
             <div class="stages-grid-item">
                 <div class="stage-number-grid">
-                    <h3 class="horizontal-text">1</h3>
+                    <h3 class="horizontal-text">{{$stage_date['id']}}</h3>
                     <h4 class="vertical-text">ЭТАП</h4>
                 </div>
                 <div class="stages-description">
-                    <h2>!31.05.2022!</h2>
+                    <h2>{{date('d-m-Y',strtotime($stage_date['beginning_stage']))}}</h2>
+                    <h2>{{date('d-m-Y',strtotime($stage_date['end_stage']))}}</h2>
                 </div>
-                <h4>Подача заявок</h4>
+                <h4>{{$stage_date['stage_name']}}</h4>
             </div>
-            <div class="stages-grid-item">
-                <div class="stage-number-grid">
-                    <h3 class="horizontal-text">2</h3>
-                    <h4 class="vertical-text">ЭТАП</h4>
-                </div>
-                <div class="stages-description">
-                    <h2>!31.05.2022!</h2>
-                    
-                </div>
-                <h4>Выполнение заданий</h4>
-            </div>
-            <div class="stages-grid-item">
-                <div class="stage-number-grid">
-                    <h3 class="horizontal-text">3</h3>
-                    <h4 class="vertical-text">ЭТАП</h4>
-                </div>
-                <div class="stages-description">
-                    <h2>!31.05.2022!</h2>
-                </div>
-                <h4>Подведение итогов</h4>
-            </div>
+            @endforeach
         </div>
     </section>
 
@@ -124,18 +106,12 @@
                     Важно знать
                 </h2>
             </div>
-            <div class="important-know-grid-item-one">
-                <h3>Информационное письмо</h3>
-                <a class="view-info-button" href="{{URL::asset('assets/doc/InformationLetter.pdf')}}">Посмотреть</a>
-            </div>
+            @foreach ($all_additional_info as $additional_info)
             <div class="important-know-grid-item-two">
-                <h3>Положение</h3>
-                <a class="view-info-button" href="{{URL::asset('assets/doc/Position.pdf')}}">Посмотреть</a>
+                <h3>{{$additional_info['information_name']}}</h3>
+                <a class="view-info-button" href="{{URL::asset('storage/assets/doc/'.$additional_info['document_name'])}}">Посмотреть</a>
             </div>
-            <div class="important-know-grid-item-two">
-                <h3>Инструкция по работе с системой дистанционного обучения</h3>
-                <a class="view-info-button" href="{{URL::asset('assets/doc/Manual.pdf')}}">Посмотреть</a>
-            </div>
+            @endforeach
         </div>
     </section>
 
@@ -147,7 +123,7 @@
                     <p>
                         Для участия в олимпиаде необходимо заполнить заявку. После подачи заявки и ее рассмотрения, на указанную электронную
                         почту, будут высланы логин и пароль для авторизации в системе дистанционного обучения ГАПОУ
-                        СО «Екатеринбургский монтажный колледж», расположенной по  <a href="http://188.234.244.32">данному</a> адресу
+                        СО «Екатеринбургский монтажный колледж», расположенной по <a href="http://188.234.244.32">данному</a> адресу
                     </p>
                 </div>
             </div>

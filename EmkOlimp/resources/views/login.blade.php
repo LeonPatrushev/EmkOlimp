@@ -17,7 +17,7 @@
                         @enderror
                     </div>
                     <div class="authorization-form-form-item">
-                        <input name="password" id="password" type="text" placeholder="пароль" class="custom-input">
+                        <input name="password" id="password" type="text" placeholder="Пароль" class="custom-input">
                         @error('password')
                             <div class="error-form">{{ $message }}</div>
                         @enderror

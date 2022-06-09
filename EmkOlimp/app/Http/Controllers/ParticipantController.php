@@ -15,7 +15,7 @@ class ParticipantController extends Controller
             'participants_email' => 'required|email',
             'name_institution' => 'required',
             'specialization' => 'required',
-            'course' => 'required',
+            'course' => 'required|numeric',
             'teacher_full_name' => 'required', 
             'teacher_phone_number' => 'required',
             'teacher_email' => 'required|email'
@@ -43,12 +43,10 @@ class ParticipantController extends Controller
                 Participant::find($formFields['participant_id'])->update(['status_id' => 3]);
                 return redirect(route('admin.index'));
             break;
+            case('delete'):
+                Participant::find($formFields['participant_id'])->delete();
+                return redirect(route('admin.index'));
+            break;
         }    
-    }
-    
-    public function delete($id)
-    {
-        Participant::find($id)->delete();
-        return redirect(route('admin.index'));
     }
 }

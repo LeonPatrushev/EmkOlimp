@@ -1,0 +1,109 @@
+@media screen and (max-width: 1919px) {
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-family: "Tahoma-Bold";
+        text-align: center;
+        color: #ffff;
+        font-size: 3.5vmin;
+    }
+    h2 {
+        margin: 0;
+        padding: 0;
+        font-family: "Tahoma-Bold";
+        text-align: center;
+        font-size: 3vmin;
+    }
+    h3 {
+        margin: 0;
+        padding: 0;
+        font-family: "Tahoma-Bold";
+        text-align: center;
+        font-size: 2.5vmin;
+    }
+    h4 {
+        margin: 0;
+        padding: 0;
+        font-family: "Tahoma-Bold";
+        text-align: center;
+        font-size: 2.5vmin;
+    }
+    a {
+        margin: 0;
+        padding: 0;
+        font-family: "Tahoma-Bold";
+        text-align: center;
+        text-decoration: none;
+        color: #ffff;
+        font-size: 3vmin;
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        font-family: "Tahoma";
+        text-align: center;
+        font-size: 3vmin;
+    }
+    section {
+        margin-top: 3vmin;
+        background-color: #ffff;
+        width: 80%;
+    }
+    .information-about-the-olympiad-text {
+        font-size: 3vmin;
+    }
+    .footer-lower-block {
+        width: 80%;
+    }
+    .footer-info-college {
+        font-size: 1.5vmin;
+    }
+    .header-upper-block {
+        width: 80%;
+    }
+    .header-lower-block-nav {
+        width: 80%;
+    }
+    .header-lower-block-nav .nav-button {
+        font-size: 1.7vmin;
+    }
+    .header-upper-block-grid h2 {
+        color: #ffff;
+        font-size: 2.5vmin;
+    }
+    .view-info-button:hover {
+        font-size: 2.7vmin;
+    }
+}
+
+@media screen and (max-width: 1390px) {
+    .submit-application-form-item .custom-input {
+        width: 50vmin;
+        height: 5vmin;
+        font-size: 1.5vmin;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .submit-application-form-item .custom-input {
+        width: 45vmin;
+        height: 5vmin;
+        font-size: 1.5vmin;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .submit-application-form-item .custom-input {
+        width: 40vmin;
+        height: 5vmin;
+        font-size: 1.5vmin;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .submit-application-form-item .custom-input {
+        width: 35vmin;
+        height: 5vmin;
+        font-size: 1.5vmin;
+    }
+}
