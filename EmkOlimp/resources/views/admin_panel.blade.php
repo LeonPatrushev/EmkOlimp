@@ -182,36 +182,36 @@
                         </div>
                     </div>
                     <div class="tabs__pane tabs_pane_min" id="content-2">
-                        <div>
+                        <div class="changing-information-about-olympiad">
                             <div class="stage-date-grid">
                                 <div class="stage-date-head">
-
+                                    <h2>Изменение этапов олимпиады</h2>
                                 </div>
                                 <div class="stage-date-main">
                                     @foreach ($all_stage_date as $stage_date)
                                         <form method="POST" action="{{route('stage.update')}}" class="stage-date-form">
                                             @csrf
                                             <h2>{{$stage_date['id']}} этап</h2>
-                                            <input type="text" value="{{$stage_date['stage_name']}}" class="stage_name_input" id="stage_name" name="stage_name" placeholder="Название этапа">
+                                            <input type="text" value="{{$stage_date['stage_name']}}" class="custom-input" id="stage_name" name="stage_name" placeholder="Название этапа">
                                             <input type="date" value="{{$stage_date['beginning_stage']}}" class="stage_beginning_date_input" id="beginning_stage" name="beginning_stage">
                                             <input type="date" value="{{$stage_date['end_stage']}}" class="stage_end_date_input" id="end_stage" name="end_stage">
-                                            <button type="submit" value="{{$stage_date['id']}}" class="stage_id_button" id="stage_id" name="stage_id">Обновить данные {{$stage_date['id']}} этапа</button>
+                                            <button type="submit" value="{{$stage_date['id']}}" class="custom-button" id="stage_id" name="stage_id">Обновить данные {{$stage_date['id']}} этапа</button>
                                         </form>
                                     @endforeach
                                 </div>
                             </div>
-                            <div class="additional-info-grid">
-                                <div class="additional-info-head">
-
+                            <div class="stage-date-grid">
+                                <div class="stage-date-head">
+                                    <h2>Изменение информации из блока "Важно знать"</h2>
                                 </div>
-                                <div class="additional-info-main">
+                                <div class="stage-date-main">
                                     @foreach ($all_additional_info as $additional_info)
-                                        <form method="POST" action="{{route('info.update')}}" class="additional-info-form" enctype="multipart/form-data">
+                                        <form method="POST" action="{{route('info.update')}}" enctype="multipart/form-data" class="stage-date-form">
                                             @csrf
-                                            <h2>{{$additional_info['id']}} дополнительная информация</h2>
-                                            <input type="text" value="{{$additional_info['information_name']}}" class="" name="information_name" id="information_name">
-                                            <input type="file" class="" name="document_name" id="document_name">
-                                            <button type="submit" value="{{$additional_info['id']}}" class="" name="information_id" id="information_id">Обновить информацию {{$additional_info['id']}}</button>
+                                            <h2>{{$additional_info['id']}}я доп. информация</h2>
+                                            <input type="text" value="{{$additional_info['information_name']}}" class="custom-input" name="information_name" id="information_name">
+                                            <div class="custom-file"><input type="file" name="document_name" id="document_name"></div>
+                                            <button type="submit" value="{{$additional_info['id']}}" class="custom-button" name="information_id" id="information_id">Обновить информацию</button>
                                         </form>
                                     @endforeach
                                 </div>
