@@ -24,7 +24,7 @@ Route::post('/admin/register/register',[RegisterController::class,'create'])->mi
 
 Route::get('/admin/logout',[LogoutController::class, 'index'])->name('logout.index');
 
-Route::post('/participant/store',[ParticipantController::class, 'store'])->middleware('auth')->name('participant.store');
+Route::post('/participant/store',[ParticipantController::class, 'store'])->name('participant.store');
 Route::post('/participant/update',[ParticipantController::class, 'update'])->middleware('auth')->name('participant.update');
 
 Route::post('stage/update', [StageDateController::class,'update'])->middleware('auth')->name('stage.update');
